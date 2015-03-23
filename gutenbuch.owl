@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://bedilico.us/ontologies/gutenbuch.owl#"
+     xml:base="http://bedilico.us/ontologies/gutenbuch.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#">
+        <rdfs:comment rdf:datatype="&xsd;string">Project gutenberg and wikipedia link. First trial on geniousmind Kafka.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#addedToGutenberg -->
+
+    <owl:ObjectProperty rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#addedToGutenberg">
+        <rdfs:domain rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#AddedToGutenberg"/>
+        <rdfs:range rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#author_name -->
+
+    <owl:ObjectProperty rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#author_name">
+        <rdfs:domain rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+        <rdfs:range rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#authorName"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#genre -->
+
+    <owl:ObjectProperty rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#genre">
+        <rdfs:range rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+        <rdfs:domain rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#has_pagenumber -->
+
+    <owl:ObjectProperty rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#has_pagenumber">
+        <rdfs:range rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+        <rdfs:domain rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Pages"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#identified_with -->
+
+    <owl:ObjectProperty rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#identified_with">
+        <rdfs:range rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+        <rdfs:domain rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#ISBN"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#released -->
+
+    <owl:ObjectProperty rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#released"/>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#summary -->
+
+    <owl:ObjectProperty rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#summary">
+        <rdfs:range rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Abstract"/>
+        <rdfs:domain rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#title -->
+
+    <owl:ObjectProperty rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#title">
+        <rdfs:range rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#titled_as -->
+
+    <owl:ObjectProperty rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#titled_as">
+        <rdfs:range rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+        <rdfs:domain rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#writtenIn -->
+
+    <owl:ObjectProperty rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#writtenIn">
+        <rdfs:range rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+        <rdfs:domain rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Language"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#writtenInCounrty -->
+
+    <owl:ObjectProperty rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#writtenInCounrty">
+        <rdfs:domain rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+        <rdfs:range rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#written_by -->
+
+    <owl:ObjectProperty rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#written_by">
+        <rdfs:domain rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Author"/>
+        <rdfs:range rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#genre -->
+
+    <owl:DatatypeProperty rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#genre"/>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#summary -->
+
+    <owl:DatatypeProperty rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#summary"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#Abstract -->
+
+    <owl:Class rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#Abstract">
+        <rdfs:subClassOf rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#AddedToGutenberg -->
+
+    <owl:Class rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#AddedToGutenberg">
+        <rdfs:subClassOf rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#Author -->
+
+    <owl:Class rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#Author"/>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#Book -->
+
+    <owl:Class rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#Country -->
+
+    <owl:Class rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#Country"/>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#Genre -->
+
+    <owl:Class rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#Genre">
+        <rdfs:subClassOf rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#ISBN -->
+
+    <owl:Class rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#ISBN">
+        <rdfs:subClassOf rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#Language -->
+
+    <owl:Class rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#Language"/>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#Media -->
+
+    <owl:Class rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#Media">
+        <rdfs:subClassOf rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#Pages -->
+
+    <owl:Class rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#Pages">
+        <rdfs:subClassOf rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#PublishDate -->
+
+    <owl:Class rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#PublishDate">
+        <rdfs:subClassOf rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#Title -->
+
+    <owl:Class rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#Title">
+        <rdfs:subClassOf rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bedilico.us/ontologies/gutenbuch.owl#authorName -->
+
+    <owl:Class rdf:about="http://bedilico.us/ontologies/gutenbuch.owl#authorName">
+        <rdfs:subClassOf rdf:resource="http://bedilico.us/ontologies/gutenbuch.owl#Author"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
